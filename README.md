@@ -14,11 +14,11 @@
 
 - [Fitur Utama](#-fitur-utama)
 - [Tech Stack](#-tech-stack)
+- [Struktur Proyek](#-struktur-proyek)
 - [Persyaratan Sistem](#-persyaratan-sistem)
 - [Instalasi](#-instalasi)
 - [Konfigurasi](#-konfigurasi)
 - [Fitur Berdasarkan Status Login](#-fitur-berdasarkan-status-login)
-- [Screenshot](#-screenshot)
 - [Struktur Database](#-struktur-database)
 - [Penggunaan](#-penggunaan)
 - [Testing](#-testing)
@@ -75,6 +75,34 @@
 - **ESLint:** Basic React Native config
 - **Prettier:** Code formatting (via .prettierrc)
 - **Git:** Version control
+
+---
+
+## 📁 Struktur Proyek
+
+```
+WartaKini/
+├── .env.example          # Template untuk environment variables
+├── .gitignore           # File yang di-ignore Git
+├── .prettierrc          # Konfigurasi Prettier
+├── app/                 # Kode aplikasi utama (Expo Router)
+│   ├── _layout.tsx      # Root layout
+│   ├── index.tsx        # Home screen
+│   ├── (tabs)/          # Tab navigation
+│   ├── article/         # Article detail pages
+│   ├── collection/      # Collection pages
+│   └── search/          # Search pages
+├── app.json             # Konfigurasi Expo
+├── assets/              # Gambar dan font
+├── babel.config.js      # Konfigurasi Babel
+├── components/          # Komponen React reusable
+├── constants/           # Konstanta aplikasi
+├── package.json         # Dependencies dan scripts
+├── services/            # API services (Supabase, News API)
+├── tsconfig.json        # Konfigurasi TypeScript
+├── types/               # Type definitions
+└── utils/               # Utility functions
+```
 
 ---
 
@@ -277,56 +305,9 @@ Untuk testing, jalankan script insert sample data:
 
 ---
 
-## 📸 Screenshot
-
-### Main Features
-
-#### 1. Landing Page (sign in & sign up)
-<div style="display: flex; gap: 10px;">
-  <img src="dokumentasi/img/LandingPage.jpeg" width="200" alt="Home Screen" />
-  <img src="dokumentasi/img/Sign-In.jpeg" width="200" alt="Breaking News Carousel" />
-   <img src="dokumentasi/img/Sign-up.jpeg" width="200" alt="Breaking News Carousel" />
-</div>
-
-#### 2.Home Screen & Breaking News
-<div style="display: flex; gap: 10px;">
-  <img src="dokumentasi/img/homepage.jpeg" width="200" alt="Home Screen" />
-</div>
-
-**Home Screen** — Welcome message dengan avatar user, search bar, breaking news carousel  
-**Breaking News Carousel** — Highlight berita utama dengan swipe gesture
-
-
-#### 3. News Categories & Article Detail
-<div style="display: flex; gap: 10px;">
-  <img src="dokumentasi/img/category.jpeg" width="200" alt="News Categories" />
-  <img src="dokumentasi/img/ArticlePage.jpeg" width="200" alt="Article Detail" />
-</div>
-
-**News Categories** — Filter berita berdasarkan kategori  
-**Article Detail** — Full article content dengan bookmark option
-
-
-
-#### 4. Collections Management
-<div style="display: flex; gap: 10px;">
-  <img src="dokumentasi/img/collection.jpeg" width="200" alt="Collections List" />
-  <img src="dokumentasi/img/collection-detail.jpeg" width="200" alt="Collection Detail" />
-</div>
-
-**Collections List** — Daftar koleksi yang dibuat user  
-**Collection Detail** — Artikel dalam koleksi tertentu
-
-#### 5. User Profile & Settings
-<div style="display: flex; gap: 10px;">
-  <img src="dokumentasi/img/SettingsPage.jpeg" width="200" alt="User Profile" />
-
-</div>
-
-**User Profile** — Informasi user dengan avatar inisial  
-**Settings** — Pengaturan aplikasi dan logout
-
 ---
+
+## 🗄 Struktur Database
 
 ## 🗄 Struktur Database
 
